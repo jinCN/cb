@@ -2,11 +2,11 @@ module.exports = awaitor
 
 function awaitor () {
   let cb = function (...args) {
-    cb.resolve(args)
+    cb._resolve(args)
   }
   cb.then = then
   cb._promise = new Promise((resolve, reject) => {
-    cb.resolve = resolve
+    cb._resolve = resolve
   })
   return cb
 }

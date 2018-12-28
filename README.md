@@ -1,5 +1,12 @@
-# @mybug/awaitor
+# [@mybug](https://www.npmjs.com/org/mybug)/awaitor
 awaitable callback. 
+
+async/await way to call callback style functions
+
+## thought
+If you want to convert callback style to async/await style, you can either:
+1. wrap the operation to return a promise
+2. just call the operation, using @mybug/awaitor as callback, like the example below  
 
 ## usage
 awaitor()
@@ -23,7 +30,7 @@ function foo(a,b,cb){
 }
 ```
 
-## use together with @mybug/wait
+## use together with [@mybug/wait](https://www.npmjs.com/package/@mybug/wait)
 
 wait can await a thing synchronously. 
 
@@ -40,3 +47,6 @@ function foo(a,b,cb){
   setTimeout(()=>cb(a+b),1000)
 }
 ```
+
+## compatibility
+You can use @mybug/awaitor in both nodejs and browser environment.

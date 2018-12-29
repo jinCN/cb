@@ -13,6 +13,10 @@ awaitor()
 
 return an awaitable callback, the promiseValue of which is the args array it's called with 
 
+awaitor.norm()
+
+same as above, but it only accept two args: `(err,value)`. If err exists, promiseValue will be `err` and rejected. 
+Otherwise, promiseValue will be `value`. 
 ## example
 
 ```javascript
@@ -32,7 +36,7 @@ function foo(a,b,cb){
 
 ## use together with [@mybug/wait](https://www.npmjs.com/package/@mybug/wait)
 
-wait can await a thing synchronously. 
+wait can await something synchronously. 
 
 ```javascript
 const awaitor = require('@mybug/awaitor')

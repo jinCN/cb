@@ -1,4 +1,4 @@
-# [@mybug](https://www.npmjs.com/org/mybug)/awaitor
+# [@superjs](https://www.npmjs.com/org/superjs)/awaitor
 awaitable callback. 
 
 async/await way to call callback style functions
@@ -6,7 +6,7 @@ async/await way to call callback style functions
 ## thought
 If you want to convert callback style to async/await style, you can either:
 1. wrap the operation to return a promise
-2. just call the operation, using @mybug/awaitor as callback, like the example below  
+2. just call the operation, using @superjs/awaitor as callback, like the example below  
 
 ## usage
 awaitor()
@@ -20,7 +20,7 @@ Otherwise, promiseValue will be `value`.
 ## example
 
 ```javascript
-const awaitor = require('@mybug/awaitor')
+const awaitor = require('@superjs/awaitor')
 // await can't be used without being wrapped by async function
 ;(async ()=>{
   let cb = awaitor()
@@ -34,13 +34,13 @@ function foo(a,b,cb){
 }
 ```
 
-## use together with [@mybug/wait](https://www.npmjs.com/package/@mybug/wait)
+## use together with [@superjs/wait](https://www.npmjs.com/package/@superjs/wait)
 
 wait can await something synchronously. 
 
 ```javascript
-const awaitor = require('@mybug/awaitor')
-const wait = require('@mybug/wait')
+const awaitor = require('@superjs/awaitor')
+const wait = require('@superjs/wait')
 
 let cb = awaitor()
 foo(1,2,cb) // whenever a callback is needed, just use cb
@@ -53,4 +53,4 @@ function foo(a,b,cb){
 ```
 
 ## compatibility
-You can use @mybug/awaitor in both nodejs and browser environment.
+You can use @superjs/awaitor in both nodejs and browser environment.
